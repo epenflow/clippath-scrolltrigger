@@ -16,13 +16,15 @@ export const BeerCard: React.FC<BeerCardProps> = ({
 	buttonColor,
 }) => {
 	return (
-		<section className="card-container">
+		<section className="beer-container" style={{ zIndex }}>
 			<div
-				className={cn('beer-container bg-center', trigger && 'trigger')}
+				className={cn(
+					'beer-image-container bg-center',
+					trigger && 'trigger',
+				)}
 				style={{
 					backgroundImage: `url("${src}")`,
 					backgroundColor,
-					zIndex,
 				}}>
 				<button
 					className="px-5 py-2.5 text-2xl uppercase font-bold absolute bottom-2.5 right-2.5 lg:bottom-20 lg:right-40"

@@ -40,6 +40,7 @@ const images: BeerCardProps[] = [
 ];
 function App() {
 	const container = React.useRef<React.ElementRef<'main'>>(null);
+
 	useGSAP(() => {
 		const card = gsap.utils.toArray('.trigger');
 		const tl = gsap.timeline({
@@ -47,7 +48,7 @@ function App() {
 				pin: container.current,
 				scrub: 1,
 				start: 'top top',
-				end: `bottom+=${images.length}000vh bottom`,
+				end: `bottom+=${images.length}0000vh bottom`,
 				markers: true,
 			},
 		});
@@ -65,14 +66,14 @@ function App() {
 	return (
 		<div className="overflow-x-hidden">
 			<main className="relative h-screen" ref={container}>
-				{images.reverse().map((img, index) => (
+				{images.map((beer, index) => (
 					<BeerCard
 						key={index}
-						src={img.src}
-						backgroundColor={img.backgroundColor}
-						trigger={img.trigger}
-						zIndex={img.zIndex}
-						buttonColor={img.buttonColor}
+						backgroundColor={beer.backgroundColor}
+						buttonColor={beer.buttonColor}
+						src={beer.src}
+						trigger={beer.trigger}
+						zIndex={beer.zIndex}
 					/>
 				))}
 			</main>
