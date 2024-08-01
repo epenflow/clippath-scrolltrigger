@@ -80,6 +80,7 @@ function App() {
 				<h1 className="lg:text-9xl text-4xl md:text-6xl  uppercase font-extrabold">
 					foot<span className="italic">er</span>
 				</h1>
+				<p>x</p>
 			</footer>
 		</div>
 	);
