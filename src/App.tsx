@@ -5,32 +5,33 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { BeerCard } from './__components__/beer-card';
 import { BeerCardProps } from './__components__/beer-card';
+import { beer_1, beer_2, beer_3, beer_4 } from './assets';
 gsap.registerPlugin(ScrollTrigger);
 
 const images: BeerCardProps[] = [
 	{
-		src: '1.webp',
+		src: beer_1,
 		zIndex: 40,
 		backgroundColor: '#f9f5f0',
 		trigger: true,
 		buttonColor: '#f8a919',
 	},
 	{
-		src: '2.webp',
+		src: beer_2,
 		zIndex: 30,
 		backgroundColor: '#48645d',
 		trigger: true,
 		buttonColor: '#d3a18d',
 	},
 	{
-		src: '3.webp',
+		src: beer_3,
 		zIndex: 20,
 		backgroundColor: '#f8a919',
 		trigger: true,
 		buttonColor: 'white',
 	},
 	{
-		src: '4.webp',
+		src: beer_4,
 		zIndex: 10,
 		backgroundColor: '#7ad6d5',
 		trigger: false,

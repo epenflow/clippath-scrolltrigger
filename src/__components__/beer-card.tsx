@@ -20,7 +20,7 @@ export const BeerCard: React.FC<BeerCardProps> = ({
 			<div
 				className={cn('beer-container bg-center', trigger && 'trigger')}
 				style={{
-					backgroundImage: `url("/${src}")`,
+					backgroundImage: `url("${src}")`,
 					backgroundColor,
 					zIndex,
 				}}>
